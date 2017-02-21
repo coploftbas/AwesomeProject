@@ -21,7 +21,7 @@ export default class MyScene extends Component {
         </TouchableHighlight>
 
         <TouchableHighlight onPress={this.props.onBack}>
-          <Text>Tap me to go BACK</Text>
+          <Text>Tap me to go back</Text>
         </TouchableHighlight>
       </View>
     )
