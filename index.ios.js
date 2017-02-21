@@ -29,7 +29,7 @@ export default class AwesomeProject extends Component {
       ])
     };
   }
-  
+
   render() {
     let myPic = {
       uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
@@ -42,9 +42,9 @@ export default class AwesomeProject extends Component {
       <Navigator
         initialRoute = {{ title: 'My Initial Scene', index: 0 }}
         renderScene = {(route, navigator) => {
-          return <MyScene 
+          return <MyScene
                    title = {route.title}
-                   
+
                    //Function to call when a new scene should be displayed
                    onForward = {() => {
                       const nextIndex = route.index + 1;
@@ -53,7 +53,7 @@ export default class AwesomeProject extends Component {
                         index: nextIndex,
                       });
                     }}
-                   
+
                    //Function to call to go back to the previous scene
                    onBack = {() => {
                       if( route.index > 0) {
@@ -63,17 +63,17 @@ export default class AwesomeProject extends Component {
                   />
         }}
       />
-      /*<Navigator 
-        initialRoute={{ title: 'My Initial Scene', index: 0 }} 
+      /*<Navigator
+        initialRoute={{ title: 'My Initial Scene', index: 0 }}
         renderScene={(route, navigator) => {
           return <MyScene title={route.title} />
         }}
       />*/
-      
+
       // ================= COMPONENTS TESTING =================
       /*
       <View style={styles.container}>
-        
+
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
@@ -95,23 +95,23 @@ export default class AwesomeProject extends Component {
           <Blink blinkText = 'Blinking Banana' style={styles.welcome}/>
         </Text>
         <Text>Is this part going to move up when blink disappear ?</Text>
-        
-      </View> 
+
+      </View>
       */
-      
+
       // ================= FLEX TEST 1 =================
       /*
       <View style={{flex: 1}}>
         <View style={{flex: 1, backgroundColor: 'powderblue'}} />
         <View style={{flex: 2, backgroundColor: 'skyblue'}} />
-        <View style={{flex: 3, backgroundColor: 'steelblue'}} /> 
+        <View style={{flex: 3, backgroundColor: 'steelblue'}} />
         <View style={{flex: 5, backgroundColor: 'lightblue'}} />
       </View>*/
-      
+
       //FLEX TEST 2 (FLEX ROW)
       /*
       <View style={{
-          flex: 1, 
+          flex: 1,
           flexDirection: 'row',
           //justifyContent: 'space-between', // DOESNT EFFECT TO 'FLEX'
         }}>
@@ -119,11 +119,11 @@ export default class AwesomeProject extends Component {
             flex: 4, height: 50, backgroundColor: 'powderblue'}} />
         <View style={{//width: 50,
             flex: 1, height: 50, backgroundColor: 'skyblue'}} />
-        <View style={{//width: 50, 
+        <View style={{//width: 50,
             flex: 4, height: 50, backgroundColor: 'steelblue'}} />
       </View>
       */
-      
+
       //FLEX TEST 3 (FLEX COLUMN)
       /*
       <View style={{
@@ -136,7 +136,7 @@ export default class AwesomeProject extends Component {
         <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
       </View>
       */
-      
+
       //ALIGN ITEMS
       /*
        <View style={{
@@ -150,7 +150,7 @@ export default class AwesomeProject extends Component {
         <View style={{ height: 50, backgroundColor: 'steelblue'}} />
       </View>
       */
-      
+
       // ================= TEXT INPUT ====================
       /*
       <View style={{padding: 10}}>
@@ -164,7 +164,7 @@ export default class AwesomeProject extends Component {
         </Text>
       </View>
       */
-      
+
       // ================= TEXT INPUT ====================
       /*
       <View style={{flex:1}}>
@@ -189,7 +189,7 @@ export default class AwesomeProject extends Component {
       </ScrollView>
       </View>
       */
-      
+
       // =============== ListView ==============
       /*
       <View style={{flex: 1, paddingTop: 22}}>
@@ -217,13 +217,13 @@ class Blink extends Component {
   constructor(props) {
     super(props);
     this.state = {showText: true};
-    
+
     //Toggle the state every second
     setInterval(() => {
       this.setState({ showText: !this.state.showText});
     }, 1000);
   }
-  
+
   render() {
     let myDisplay = this.state.showText ? this.props.blinkText : ' ';
     return (
@@ -266,7 +266,7 @@ const styles = StyleSheet.create({
     flex: 10,
     backgroundColor: '#FFFFFF',
   },
-  
+
 });
 
 AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
