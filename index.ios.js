@@ -38,31 +38,40 @@ export default class AwesomeProject extends Component {
       uri: 'https://facebook.github.io/react-native/img/favicon.png'
     }
     return (
-      //<MyScene />
-      <Navigator
-        initialRoute = {{ title: 'My Initial Scene', index: 0 }}
-        renderScene = {(route, navigator) => {
-          return <MyScene
-                   title = {route.title}
 
-                   //Function to call when a new scene should be displayed
-                   onForward = {() => {
-                      const nextIndex = route.index + 1;
-                      navigator.push({
-                        title: 'Scene ' + nextIndex,
-                        index: nextIndex,
-                      });
-                    }}
 
-                   //Function to call to go back to the previous scene
-                   onBack = {() => {
-                      if( route.index > 0) {
-                        navigator.pop();
-                      }
-                    }}
-                  />
-        }}
-      />
+
+        <Navigator
+          initialRoute = {{ title: 'My Initial Scene', index: 0 }}
+          renderScene = {(route, navigator) => {
+            return <MyScene
+                     title = {route.title}
+
+                     //Function to call when a new scene should be displayed
+                     onForward = {() => {
+                        const nextIndex = route.index + 1;
+                        navigator.push({
+                          title: 'Scene ' + nextIndex,
+                          index: nextIndex,
+                        });
+                      }}
+
+                     //Function to call to go back to the previous scene
+                     onBack = {() => {
+                        if( route.index > 0) {
+                          navigator.pop();
+                        }
+                      }}
+                    />
+          }}
+        />
+
+
+
+
+
+
+
       /*<Navigator
         initialRoute={{ title: 'My Initial Scene', index: 0 }}
         renderScene={(route, navigator) => {
@@ -71,7 +80,7 @@ export default class AwesomeProject extends Component {
       />*/
 
       // ================= COMPONENTS TESTING =================
-      /*
+/*
       <View style={styles.container}>
 
         <Text style={styles.welcome}>
@@ -96,8 +105,9 @@ export default class AwesomeProject extends Component {
         </Text>
         <Text>Is this part going to move up when blink disappear ?</Text>
 
+
       </View>
-      */
+*/
 
       // ================= FLEX TEST 1 =================
       /*
