@@ -1,5 +1,5 @@
 //@flow
-mport React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { View, Text, TouchableHighlight } from 'react-native';
 
 export default class MyScene extends Component {
@@ -11,10 +11,12 @@ export default class MyScene extends Component {
 
   render() {
     return (
+      /*
       <View style={{paddingTop: 25}}>
         <Text>Hi! My name is {this.props.title}.</Text>
       </View>
-      /*<View style={{paddingTop: 25}}>
+      */
+      <View style={{paddingTop: 25}}>
         <Text>Current Scene: {this.props.title}</Text>
 
         <TouchableHighlight onPress={this.props.onForward}>
@@ -24,8 +26,8 @@ export default class MyScene extends Component {
         <TouchableHighlight onPress={this.props.onBack}>
           <Text>Tap me to go back</Text>
         </TouchableHighlight>
-      </View>*/
-    );
+      </View>
+    )
   }
 }
 
@@ -33,4 +35,4 @@ MyScene.propTypes = {
   title: PropTypes.string.isRequired,
   onForward: PropTypes.func.isRequired,
   onBack: PropTypes.func.isRequired,
-};
+}
