@@ -16,7 +16,7 @@ import {
   Navigator,
   Image
 } from 'react-native';
-import MyScene from './MyScene'
+//import MyScene from './MyScene'
 
 export default class AwesomeProject extends Component {
   constructor(props) {
@@ -38,6 +38,8 @@ export default class AwesomeProject extends Component {
       uri: 'https://facebook.github.io/react-native/img/favicon.png'
     }
     return (
+
+      /*
       //<MyScene />
       <Navigator
         initialRoute = {{ title: 'My Initial Scene', index: 0 }}
@@ -62,7 +64,12 @@ export default class AwesomeProject extends Component {
                     }}
                   />
         }}
-      />
+      /> */
+
+
+
+
+
       /*<Navigator
         initialRoute={{ title: 'My Initial Scene', index: 0 }}
         renderScene={(route, navigator) => {
@@ -71,7 +78,7 @@ export default class AwesomeProject extends Component {
       />*/
 
       // ================= COMPONENTS TESTING =================
-      /*
+
       <View style={styles.container}>
 
         <Text style={styles.welcome}>
@@ -97,7 +104,7 @@ export default class AwesomeProject extends Component {
         <Text>Is this part going to move up when blink disappear ?</Text>
 
       </View>
-      */
+      
 
       // ================= FLEX TEST 1 =================
       /*
